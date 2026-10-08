@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <title>회원가입</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+    <script src="/js/register.js"></script>
+</head>
+<body>
+    <div class="main-container">
+        <div class="auth-container">
+            <form class="auth-form" id="registerForm">
+                <h2>회원가입</h2>
+                
+                <div class="input-group">
+                    <input type="text" id="reg-username" name="username" placeholder="아이디" required>
+                    <p></p>
+                    <input type="password" id="reg-password" name="password" placeholder="비밀번호" required>
+                    <p></p>
+                    <input type="email" id="reg-email" name="email" placeholder="이메일" required>
+                </div>
+
+                <div id="reg-result"></div>
+                <button type="submit" class="auth-btn">가입하기</button>
+                <a href="login.html" class="auth-link">이미 계정이 있으신가요? 로그인</a>
+            </form>
+        </div>
+        <div class="experiment-section">
+            <div class="level-select-row">
+                <label for="experiment-level">실험 단계 선택 :</label>
+                <select id="experiment-level">
+                    <option value="/level1">Level 1: 취약 코드 (문자열 결합)</option>
+                    <option value="/level2">Level 2: 입력값 검증 (필터링)</option>
+                    <option value="/level3">Level 3: 매개변수화 (Prepared)</option>
+                </select> 
+            </div>
+        </div>
+    </div>
+</body>
+</html>

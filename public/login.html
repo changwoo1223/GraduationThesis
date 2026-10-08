@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <title>로그인</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+    <script src="/js/login.js" defer></script>
+</head>
+<body>
+    <div class="main-container">
+        <div class="auth-container">
+            <form class="auth-form" id="loginForm">
+                <h2>로그인</h2>  
+                    
+                <div class="input-group">
+                    <input type="text" id="username" name="username" placeholder="아이디" required>
+                <p></p>
+                    <input type="password" id="password" name="password" placeholder="비밀번호" required>
+                </div>
+                <div id="result"></div>
+                <button type="submit" class="auth-btn">로그인</button>
+                <a href="register.html" class="auth-link">계정이 없으신가요? 회원가입</a>
+            </form>
+        </div>
+
+        <div class="experiment-section">
+            <div class="level-select-row">
+                <label for="experiment-level">실험 단계 선택 :</label>
+                <select id="experiment-level">
+                    <option value="/level1">Level 1: 취약 코드 (문자열 결합)</option>
+                    <option value="/level2">Level 2: 입력값 검증 (필터링)</option>
+                    <option value="/level3">Level 3: 매개변수화 (Prepared)</option>
+                </select> 
+            </div>
+        </div>
+    </div>
+</body>
+</html>

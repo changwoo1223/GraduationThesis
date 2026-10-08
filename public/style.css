@@ -1,0 +1,119 @@
+/* 기본 배경 및 레이아웃 (공통) */
+body {
+    margin: 0;
+    padding: 0;
+    font-family: 'Pretendard', sans-serif;
+    background-color: #f4f7f9;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+/* 로그인 박스와 아래 실험 영역을 세로로 묶어주는 컨테이너 */
+.main-container {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;               /* 로그인 박스와 실험 영역 사이의 간격 */
+    width: 100%;
+    max-width: 500px;        /* padding을 고려해 max-width를 조금 넓혀주면 안정적입니다 */
+    box-sizing: border-box;
+}
+
+/* 컨테이너 (로그인/회원가입 공통) */
+.auth-container {
+    background-color: #ffffff;
+    padding: 40px;
+    border-radius: 12px;
+    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.1);
+    width: 100%;             /* 부모인 main-container 너비에 100% 맞춤 */
+    box-sizing: border-box;  /* padding이 width를 삐져나가지 않게 강제 */
+}
+
+.auth-form h2 {
+    margin-top: 0;
+    margin-bottom: 24px;
+    color: #333;
+    text-align: center;
+}
+
+/* 입력창 그룹 */
+.input-group {
+    margin-bottom: 15px;
+    text-align: left;
+}
+
+.input-group input {
+    width: 100%;
+    padding: 12px;
+    border: 1px solid #ddd;
+    border-radius: 6px;
+    box-sizing: border-box;
+    font-size: 1rem;
+    transition: border-color 0.2s;
+}
+
+.input-group input:focus {
+    outline: none;
+    border-color: #007bff;
+}
+
+/* 버튼 (검은색 테마 유지) */
+.auth-btn {
+    width: 100%;
+    padding: 12px;
+    background-color: #000000;
+    color: white;
+    border: none;
+    border-radius: 6px;
+    font-size: 1rem;
+    font-weight: bold;
+    cursor: pointer;
+    margin-top: 10px;
+    transition: background-color 0.2s;
+}
+
+.auth-btn:hover {
+    background-color: #494949;
+}
+
+.auth-link {
+    display: block;
+    text-align: center;
+    margin-top: 20px;
+    font-size: 0.9rem;
+    color: #666;
+    text-decoration: none;
+}
+
+/* 3. 하단 실험 제어 영역 */
+.experiment-section {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+    width: 100%;             /* 전체 너비 확보 */
+    box-sizing: border-box;
+}
+
+/* 실험 단계 선택 줄 정렬 */
+.level-select-row {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    font-size: 0.9rem;
+    font-weight: 600;
+    color: #333;
+    
+}
+
+.level-select-row select {
+    padding: 8px 10px;
+    border: 1px solid #ddd;
+    border-radius: 6px;
+    font-family: inherit;
+    font-size: 0.85rem;
+    outline: none;
+    cursor: pointer;
+    width: 75%; 
+    background-color: #fff;
+}
